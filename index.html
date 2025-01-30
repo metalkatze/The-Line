@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            overflow: hidden; /* Verhindert Scrollen */
         }
         header {
             background-color: #333;
@@ -25,7 +26,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            height: 100vh; /* Nehmen Sie die gesamte Höhe des Viewports ein */
         }
         section {
             background-color: #fff;
@@ -34,32 +35,19 @@
             margin: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 80%;
+            height: auto;
             display: none; /* Alle Abschnitte standardmäßig ausblenden */
+            flex: 0 0 100%; /* Nehmen Sie die gesamte Breite ein */
         }
         section.active {
-            display: block; /* Nur den aktiven Abschnitt anzeigen */
-        }
-        h2 {
-            margin: 0;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        li {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        li:last-child {
-            border-bottom: none;
+            display: flex; /* Nur die aktive Sektion anzeigen */
+            flex-direction: column; /* Sicherstellen, dass der Inhalt sauber gestapelt wird */
         }
         footer {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
-            clear: both;
         }
         footer h2 {
             margin: 0;
@@ -70,12 +58,11 @@
     <header>
         <h1>The Line</h1>
         <p>Ein futuristisches Stadtprojekt in Saudi-Arabien</p>
-        <p>Eine geplante Megacity mit 170 km Länge, autofrei, nachhaltig und voll digitalisiert.</p>
     </header>
     <main>
         <section class="active" id="einleitung">
             <h2>Einleitung</h2>
-            <p>The Line ist ein futuristisches Stadtprojekt in Saudi-Arabien</p>
+            <p>The Line ist ein futuristisches Stadtprojekt in Saudi-Arabien.</p>
             <p>Eine geplante Megacity mit 170 km Länge, autofrei, nachhaltig und voll digitalisiert.</p>
         </section>
         <section id="teil-der-neom-entwicklung">
@@ -89,32 +76,14 @@
                 <li>
                     <h3>Keine Autos, emissionsfrei, 100% erneuerbare Energien</h3>
                     <ul>
-                        <li>Statt Straßen gibt es Hochgeschwindigkeitszüge</li>
-                        <li>Die Stadt läuft mit Solar- und Windenergie</li>
+                        <li>Statt Straßen gibt es Hochgeschwindigkeitszüge.</li>
+                        <li>Die Stadt läuft mit Solar- und Windenergie.</li>
                     </ul>
                 </li>
                 <li>
                     <h3>Künstliche Intelligenz und Smart City-Technologie</h3>
                     <ul>
-                        <li>Alles wird durch KI gesteuert – Beleuchtung, Verkehr, Versorgungssysteme</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Hochgeschwindigkeitszüge, alles in 5 Minuten erreichbar</h3>
-                    <ul>
-                        <li>Jeder Punkt der Stadt ist in kurzer Zeit zu Fuß oder mit Transportmitteln erreichbar</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Förderung von Innovation und Wirtschaft</h3>
-                    <ul>
-                        <li>Die Stadt soll ein Zentrum für Forschung, Start-ups und Zukunftstechnologien sein</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Schaffung neuer Arbeitsplätze</h3>
-                    <ul>
-                        <li>Millionen Jobs in Technologie, Bau, Tourismus und Nachhaltigkeit sollen entstehen</li>
+                        <li>Alles wird durch KI gesteuert – Beleuchtung, Verkehr, Versorgungssysteme.</li>
                     </ul>
                 </li>
             </ul>
@@ -125,42 +94,24 @@
                 <li>
                     <h3>Hohe Kosten und Machbarkeitsprobleme</h3>
                     <ul>
-                        <li>Das Projekt kostet Hunderte Milliarden Dollar – unklar, ob es realisierbar ist</li>
+                        <li>Das Projekt kostet Hunderte Milliarden Dollar – unklar, ob es realisierbar ist.</li>
                     </ul>
                 </li>
                 <li>
                     <h3>Auswirkungen auf die Umwelt & traditionelle Wüstenökosysteme</h3>
                     <ul>
-                        <li>Der Bau könnte empfindliche Wüstenlandschaften und Tierpopulationen stören</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Gesellschaftliche Kontrolle durch digitale Überwachung</h3>
-                    <ul>
-                        <li>KI-gesteuerte Systeme könnten Daten sammeln und die Privatsphäre einschränken</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Eingeschränkte Freiheit durch die starre Stadtstruktur</h3>
-                    <ul>
-                        <li>Leben in einer linearen Stadt ohne Autos könnte das Freiheitsgefühl beeinflussen</li>
+                        <li>Der Bau könnte empfindliche Wüstenlandschaften und Tierpopulationen stören.</li>
                     </ul>
                 </li>
             </ul>
         </section>
-        <section id="gesundheit-in-einer-smart-city">
+        <section id="gesunde-smart-city">
             <h2>Gesundheit in einer Smart City</h2>
             <ul>
                 <li>
                     <h3>Weniger Umweltverschmutzung = bessere Luftqualität</h3>
                     <ul>
                         <li>Keine Autos = weniger CO₂, besser für Lungen und Herz-Kreislauf-System.</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Psychologische Auswirkungen des Lebens in einer stark strukturierten Umgebung</h3>
-                    <ul>
-                        <li>Kein Chaos, aber könnte monoton wirken – könnte Stress oder Isolation fördern.</li>
                     </ul>
                 </li>
             </ul>
@@ -174,21 +125,13 @@
                         <li>Die Stadtstruktur könnte das typische Gemeinschaftsgefühl beeinflussen.</li>
                     </ul>
                 </li>
-                <li>
-                    <h3>Neue Kultur des digitalen Zusammenlebens</h3>
-                    <ul>
-                        <li>Smarte Technologien ersetzen klassische Interaktionen und Dienstleistungen.</li>
-                    </ul>
-                </li>
             </ul>
         </section>
     </main>
     <footer>
         <h2>Fazit</h2>
         <p>The Line ist ein ambitioniertes Zukunftsprojekt mit vielen Chancen.</p>
-        <p>Revolutionäre Ideen, aber Umsetzung bleibt abzuwarten.</p>
-        <p>Nachhaltigkeit, Technologie & moderne Infrastruktur bieten Vorteile – Umweltfreundlich, effizient, High-Tech-Leben.</p>
-        <p>Gleichzeitig gibt es Herausforderungen bzgl. Umwelt, Gesellschaft & Freiheit – Risiken wie Überwachung, soziale Kontrolle und Naturzerstörung.</p>
+        <p>Doch die Umsetzung bleibt abzuwarten.</p>
     </footer>
 <script>
     let currentSectionIndex = 0;
@@ -198,9 +141,7 @@
     sections[currentSectionIndex].classList.add('active');
 
     function showSection(index) {
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
+        sections.forEach((section) => section.classList.remove('active'));
         sections[index].classList.add('active');
     }
 
