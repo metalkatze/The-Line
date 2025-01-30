@@ -57,4 +57,88 @@
         <p>Die Zukunft: The Line und unser Leben in 50 Jahren.</p>
     </div>
 
-    <div class
+    <div class="slide">
+        <h1>Was ist "The Line"?</h1>
+        <p>„The Line“ ist ein futuristisches Stadtprojekt in Saudi-Arabien, das eine 170 Kilometer lange, lineare Stadt ohne Autos und Straßen schaffen will. Die Stadt soll in zwei parallel verlaufende Gebäude unterteilt sein, die durch eine revolutionäre Infrastruktur miteinander verbunden sind.</p>
+    </div>
+
+    <div class="slide">
+        <h1>Positive und Negative Aspekte von "The Line"</h1>
+        <h2>Positive Aspekte</h2>
+        <ul>
+            <li>Nachhaltigkeit (Zero-Emissions-Design)</li>
+            <li>Effiziente Nutzung von Raum und Ressourcen</li>
+            <li>Futuristische Architektur und Technologie zur Verbesserung der Lebensqualität</li>
+        </ul>
+        <h2>Negative Aspekte</h2>
+        <ul>
+            <li>Hohe Kosten und potenziell ungleiche Verteilung der Ressourcen</li>
+            <li>Abhängigkeit von Technologie und potenzielle Überwachung</li>
+            <li>Fehlende kulturelle Vielfalt aufgrund der geplanten Struktur</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ernährung in 50 Jahren</h1>
+        <ul>
+            <li><strong>Gentechnisch veränderte Organismen (GMO):</strong> Widerstandsfähige Pflanzen und Tiere gegen Krankheiten und Klimawandel.</li>
+            <li><strong>CRISPR-Technologie:</strong> Präzise Genbearbeitung für widerstandsfähigere Pflanzen und Tiere, aber auch ethische Bedenken.</li>
+            <li><strong>Neue Technologien und Probleme:</strong> Automatisierte Lebensmittelproduktion könnte zu sozialer Ungleichheit und Arbeitsplatzverlust führen.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Unser Leben in 50 Jahren: Gesundheit</h1>
+        <ul>
+            <li><strong>Neue Krankheiten:</strong> Entstehung neuer Krankheiten durch den Klimawandel, z.B. durch Extremwetterbedingungen oder verschobene Ökosysteme.</li>
+            <li><strong>Wiederaufkommende alte Krankheiten:</strong> Durch Schmelzen von Gletschern könnten alte Krankheitserreger wieder aktiv werden.</li>
+            <li><strong>Veränderung von Krankheitsmustern:</strong> Krankheiten, die sich durch geänderte Lebensbedingungen verbreiten (z.B. neue Vektoren durch Klimawandel).</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Freizeit und Kultur in der Zukunft</h1>
+        <ul>
+            <li><strong>Virtuelle und globale Erlebnisse:</strong> Virtuelle Konzerte, interaktive Sportereignisse und globale Vernetzung.</li>
+            <li><strong>Neue Sportarten:</strong> Anpassung von Sportarten an neue Umweltbedingungen (z.B. Wintersport in künstlichen Umgebungen).</li>
+            <li><strong>Veränderung der Kultur:</strong> Einfluss von KI und virtuellen Welten auf Kunst, Musik und zwischenmenschliche Interaktionen.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>The Line und seine Auswirkungen auf Kultur und Freizeit</h1>
+        <ul>
+            <li><strong>Digitale Vernetzung:</strong> The Line könnte den Zugang zu Kunst, Musik und Freizeit über digitale Plattformen verbessern.</li>
+            <li><strong>Gemeinschaftliche Veranstaltungen:</strong> Der Fokus auf Gemeinschaft und virtuelle Events könnte die traditionelle Freizeitgestaltung verändern.</li>
+            <li><strong>Neue Formen von Kultur:</strong> Integration von AI und interaktiven Erlebnissen könnte die kulturelle Identität der Stadt beeinflussen.</li>
+        </ul>
+    </div>
+
+    <div class="navigation">
+        <button class="button" id="prevBtn">Zurück</button>
+        <button class="button" id="nextBtn">Weiter</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide++;
+                slides[currentSlide].classList.add('active');
+            }
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentSlide > 0) {
+                slides[currentSlide].classList.remove('active');
+                currentSlide--;
+                slides[currentSlide].classList.add('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
