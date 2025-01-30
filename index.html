@@ -34,6 +34,10 @@
             margin: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 80%;
+            display: none; /* Alle Abschnitte standardmäßig ausblenden */
+        }
+        section.active {
+            display: block; /* Nur den aktiven Abschnitt anzeigen */
         }
         h2 {
             margin: 0;
@@ -69,7 +73,7 @@
         <p>Eine geplante Megacity mit 170 km Länge, autofrei, nachhaltig und voll digitalisiert.</p>
     </header>
     <main>
-        <section id="einleitung">
+        <section class="active" id="einleitung">
             <h2>Einleitung</h2>
             <p>The Line ist ein futuristisches Stadtprojekt in Saudi-Arabien</p>
             <p>Eine geplante Megacity mit 170 km Länge, autofrei, nachhaltig und voll digitalisiert.</p>
@@ -186,5 +190,33 @@
         <p>Nachhaltigkeit, Technologie & moderne Infrastruktur bieten Vorteile – Umweltfreundlich, effizient, High-Tech-Leben.</p>
         <p>Gleichzeitig gibt es Herausforderungen bzgl. Umwelt, Gesellschaft & Freiheit – Risiken wie Überwachung, soziale Kontrolle und Naturzerstörung.</p>
     </footer>
+<script>
+    let currentSectionIndex = 0;
+    const sections = document.querySelectorAll('section');
+
+    // Zeigt die erste Sektion an
+    sections[currentSectionIndex].classList.add('active');
+
+    function showSection(index) {
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        sections[index].classList.add('active');
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight') {
+            if (currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+                showSection(currentSectionIndex);
+            }
+        } else if (event.key === 'ArrowLeft') {
+            if (currentSectionIndex > 0) {
+                currentSectionIndex--;
+                showSection(currentSectionIndex);
+            }
+        }
+    });
+</script>
 </body>
 </html>
