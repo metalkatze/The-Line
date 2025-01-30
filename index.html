@@ -26,22 +26,19 @@
             margin: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             width: 80%;
-            height: auto;
             display: none; /* Alle Abschnitte standardmäßig ausblenden */
-            flex: 0 0 100%; /* Nehmen Sie die gesamte Breite ein */
         }
         section.active {
-            display: flex; /* Nur die aktive Sektion anzeigen */
-            flex-direction: column; /* Sicherstellen, dass der Inhalt sauber gestapelt wird */
+            display: block; /* Nur die aktive Sektion anzeigen */
         }
     </style>
 </head>
 <body>
     <main>
-        <section id="titelfolie">
+        <section id="titelfolie" class="active">
             <h1>The Line in Saudi-Arabien und unsere Zukunft in 50 Jahren</h1>
         </section>
-        <section class="active" id="einleitung">
+        <section id="einleitung">
             <h2>Einleitung</h2>
             <p>The Line ist ein futuristisches Stadtprojekt in Saudi-Arabien.</p>
             <p>Eine geplante Megacity mit 170 km Länge, autofrei, nachhaltig und voll digitalisiert.</p>
@@ -111,7 +108,7 @@
     </main>
 
 <script>
-    let currentSectionIndex = 1;
+    let currentSectionIndex = 0;
     const sections = document.querySelectorAll('section');
 
     // Zeigt die erste Sektion an
@@ -138,5 +135,4 @@
 </script>
 
 </body>
-
 </html>
