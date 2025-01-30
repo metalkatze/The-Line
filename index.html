@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Line - Ein futuristisches Stadtprojekt in Saudi-Arabien</title>
+    <title>The Line - Ein futuristisches Stadtprojekt</title>
     <style>
         body {
             background-color: #f2f2f2;
@@ -11,15 +11,6 @@
             margin: 0;
             padding: 0;
             overflow: hidden; /* Verhindert Scrollen */
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
         }
         main {
             display: flex;
@@ -43,23 +34,13 @@
             display: flex; /* Nur die aktive Sektion anzeigen */
             flex-direction: column; /* Sicherstellen, dass der Inhalt sauber gestapelt wird */
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        footer h2 {
-            margin: 0;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>The Line</h1>
-        <p>Ein futuristisches Stadtprojekt in Saudi-Arabien</p>
-    </header>
     <main>
+        <section id="titelfolie">
+            <h1>The Line in Saudi-Arabien und unsere Zukunft in 50 Jahren</h1>
+        </section>
         <section class="active" id="einleitung">
             <h2>Einleitung</h2>
             <p>The Line ist ein futuristisches Stadtprojekt in Saudi-Arabien.</p>
@@ -128,13 +109,9 @@
             </ul>
         </section>
     </main>
-    <footer>
-        <h2>Fazit</h2>
-        <p>The Line ist ein ambitioniertes Zukunftsprojekt mit vielen Chancen.</p>
-        <p>Doch die Umsetzung bleibt abzuwarten.</p>
-    </footer>
+
 <script>
-    let currentSectionIndex = 0;
+    let currentSectionIndex = 1;
     const sections = document.querySelectorAll('section');
 
     // Zeigt die erste Sektion an
@@ -159,5 +136,7 @@
         }
     });
 </script>
+
 </body>
+
 </html>
